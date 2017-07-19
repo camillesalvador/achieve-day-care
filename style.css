@@ -1,0 +1,189 @@
+body {
+  background-color: #F7F7F7;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+
+.header-font {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 30px;
+  line-height: 1.3;
+}
+
+/* navigation */
+.nav-icons, .nav-icons a, .menu-icon, .red-font {
+  color: #D62225;
+}
+
+.nav {
+  border-radius: 10px;
+  background: -moz-linear-gradient(0deg, #FF2600 0%, #D42834 100%); /* ff3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #FF2600), color-stop(100%, #D42834)); /* safari4+,chrome */
+  background: -webkit-linear-gradient(0deg, #FF2600 0%, #D42834 100%); /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(0deg, #FF2600 0%, #D42834 100%); /* opera 11.10+ */
+  background: -ms-linear-gradient(0deg, #FF2600 0%, #D42834 100%); /* ie10+ */
+  background: linear-gradient(90deg, #FF2600 0%, #D42834 100%); /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF2600', endColorstr='#D42834',GradientType=1 ); /* ie6-9 */
+}
+.nav-item {
+  width: 200px;
+}
+
+.nav-item a {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.nav-link:hover {
+  font-weight: 500;
+}
+
+/* header image */
+.home-header-image {
+  height: 80vh;
+  width: 100%;
+  background: url('images/eyeglass-kid.jpeg') no-repeat 50% 60%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.about-header-image {
+  height: 80vh;
+  width: 100%;
+  background: url('images/creative-desk-pens-school.jpg') no-repeat 50% 60%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.contact-header-image {
+  height: 80vh;
+  width: 100%;
+  background: url('images/cute-baby-colors.jpg') no-repeat 50% 40%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* main content */
+article p {
+  line-height: 1.3;
+}
+.underline {
+  border-bottom: 2px solid #D62225;
+}
+
+.border-red {
+  border: 2px solid #D62225;
+  border-radius: 10px;
+}
+
+.side-image {
+  border-radius: 10px;
+  width: 260px;
+}
+
+.left-article {
+  width: 820px;
+}
+
+.reach-us {
+  font-size: 18px;
+}
+
+.reach-us a, .contact a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.map iframe {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  overflow: hidden;
+}
+
+/* contact us */
+
+.contact {
+  font-size: 16px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #ffffff;
+}
+
+form input, form textarea {
+  margin-bottom: 20px;
+  border: 1px solid #D62225;
+  border-radius: 10px;
+}
+
+form button {
+  border: 1px solid #D62225;
+  border-radius: 10px;
+  background-color: inherit;
+  color: grey;
+  width: 80px;
+}
+
+button:hover {
+  background-color: #D62225;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* footer */
+footer {
+  background: -moz-linear-gradient(0deg, #FF2600 0%, #D42834 100%); /* ff3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #FF2600), color-stop(100%, #D42834)); /* safari4+,chrome */
+  background: -webkit-linear-gradient(0deg, #FF2600 0%, #D42834 100%); /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(0deg, #FF2600 0%, #D42834 100%); /* opera 11.10+ */
+  background: -ms-linear-gradient(0deg, #FF2600 0%, #D42834 100%); /* ie10+ */
+  background: linear-gradient(90deg, #FF2600 0%, #D42834 100%); /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF2600', endColorstr='#D42834',GradientType=1 ); /* ie6-9 */
+
+  color: #ffffff;
+  font-size: 14px;
+}
+
+footer a, .footer-icons a {
+  color: #ffffff;
+}
+
+.creator:hover {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid #ffffff;
+}
+
+/* for tablets */
+@media (max-width: 992px) {
+  .nav-icons, .nav {
+    display: none;
+  }
+  .menu-icon {
+    display: inline-block;
+  }
+
+  img.lightbulb {
+    display: none;
+  }
+}
+
+@media (max-width: 1199px) {
+  .side-image {
+    display: none;
+  }
+  .reach-us {
+    margin-left: -25px;
+  }
+}
