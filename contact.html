@@ -24,7 +24,7 @@
     <a class="mr-auto" href="index.html">
       <img class="img-fluid mt-2" alt="Achive Day Care Logo" src="logo.png" />
     </a>
-    
+
     <div class="d-flex flex-column align-items-end justify-content-center pr-3">
       <div class="nav-icons text-right red-text mb-3">
         <i class="fa fa-lg fa-phone mr-2" aria-hidden="true"></i>(403) 774-4064
@@ -67,12 +67,32 @@
           <i class="fa fa-phone" aria-hidden="true"></i> (403) 774-4064 <br/> Toll Free 1(844) 368-3044</div>
         </div>
         <div class="m-3 pt-4">
-          <form class="d-flex flex-column" action="#">
-            <input class="p-3" type="text" name="fullname" placeholder="Name" maxlength="30" />
-            <input class="p-3" type="email" name="email" placeholder="Email" maxlength="30" />
-            <textarea class="p-3" type="text" name="message" rows="5"  placeholder="Message" ></textarea>
-            <button class="p-2">Send</button>
+
+          <form class="d-flex flex-column" action="" method="POST">
+            <input class="p-3" type="text" name="fullname" value="" placeholder="Name" maxlength="30" required="required" />
+            <input class="p-3" type="email" name="email" value="" placeholder="Email" maxlength="30" required="required" />
+            <textarea class="p-3" type="text" name="message" rows="5"  placeholder="Message" required="required" ></textarea>
+            <button class="p-2" type="submit">Send</button>
           </form>
+
+          <?php
+            if(isset($_POST['submit'])) {
+               $to = "camille.salvador@outlook.com";
+               $from = $_POST['email'];
+               $name = $_POST['fullname'];
+               $subject = "Contact Form Message";
+               $subject2 = "Copy of your form submission";
+               $message = $name . " wrote the following:" . "\n\n" . $_POST['message'];
+               $message2 = "Here is a copy of your message " . $name . "\n\n" . $_POST['message'];
+
+               $headers = "From:" . $from;
+               $headers2 = "From:" . $to;
+               mail($to,$subject,$message,$headers);
+               mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+               echo "Mail Sent. Thank you, " . $name . ". We will contact you shortly.";
+   }
+            }
+          ?>
         </div>
       </div>
     </div>
