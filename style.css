@@ -75,6 +75,16 @@ body {
   background-size: cover;
 }
 
+.header-overlay {
+  background-color: rgba(214, 34,37, 0.55);
+  height: 25vh;
+}
+
+.tagline {
+  color: #f7f7f7;
+  font-size: 45px;
+}
+
 /* main content */
 article p {
   line-height: 1.3;
