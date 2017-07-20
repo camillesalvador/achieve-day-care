@@ -2,7 +2,7 @@
 if(isset($_POST['email'])) {
 
     // EDIT THE 2 LINES BELOW AS REQUIRED
-    $email_to = "camille.salvador@outlook.com";
+    $email_to = "info@achieve.ca";
     $email_subject = "Email from Contact Page Form";
 
     function died($error) {
@@ -56,7 +56,6 @@ if(isset($_POST['email'])) {
       $bad = array("content-type","bcc:","to:","cc:","href");
       return str_replace($bad,"",$string);
     }
-
 
 
     $email_message .= "Name: ".clean_string($fullname)."\n";

@@ -36,7 +36,7 @@ body {
   color: #ffffff;
 }
 
-.menu-icon {
+.menu-icon, .menu-nav {
   display: none;
 }
 
@@ -176,6 +176,45 @@ footer a, .footer-icons a {
 
   img.lightbulb {
     display: none;
+  }
+
+  /* menu for small devices */
+  .menu-icon:hover {
+    cursor: pointer;
+  }
+
+  .menu-nav {
+    background-color: #f7f7f7;
+    z-index: 2;
+    padding-top: 50px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 20%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    list-style: none;
+    display: none;
+  }
+  .menu-nav a {
+    color: #d62225;
+    font-size: 25px;
+  }
+  .menu-nav .nav-item {
+    font-weight: 500;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .menu-active {
+    display: block;
+  }
+  .menu-social {
+    padding-top: 50px;
+  }
+  footer {
+    font-size: 12px;
   }
 }
 
