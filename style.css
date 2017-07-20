@@ -16,12 +16,10 @@ body {
 }
 
 .nav {
-  border-radius: 10px;
-  background: -moz-linear-gradient(0deg, #FF2600 0%, #D42834 100%); /* ff3.6+ */
+  border-radius: 10px; /* ff3.6+ */
   background: -webkit-gradient(linear, left top, right top, color-stop(0%, #FF2600), color-stop(100%, #D42834)); /* safari4+,chrome */
-  background: -webkit-linear-gradient(0deg, #FF2600 0%, #D42834 100%); /* safari5.1+,chrome10+ */
-  background: -o-linear-gradient(0deg, #FF2600 0%, #D42834 100%); /* opera 11.10+ */
-  background: -ms-linear-gradient(0deg, #FF2600 0%, #D42834 100%); /* ie10+ */
+  background: -webkit-linear-gradient(0deg, #FF2600 0%, #D42834 100%); /* safari5.1+,chrome10+ */ /* opera 11.10+ */ /* ie10+ */
+  background: -webkit-linear-gradient(left, #FF2600 0%, #D42834 100%);
   background: linear-gradient(90deg, #FF2600 0%, #D42834 100%); /* w3c */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF2600', endColorstr='#D42834',GradientType=1 ); /* ie6-9 */
 }
@@ -34,6 +32,8 @@ body {
   text-transform: uppercase;
   font-size: 18px;
   color: #ffffff;
+  -webkit-transition: .2s all ease-in;
+  transition: .2s all ease-in;
 }
 
 .menu-icon, .menu-nav {
@@ -49,9 +49,6 @@ body {
   height: 80vh;
   width: 100%;
   background: url('images/eyeglass-kid.jpeg') no-repeat 50% 60%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
 }
 
@@ -59,9 +56,6 @@ body {
   height: 80vh;
   width: 100%;
   background: url('images/creative-desk-pens-school.jpg') no-repeat 50% 60%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
 }
 
@@ -69,9 +63,6 @@ body {
   height: 80vh;
   width: 100%;
   background: url('images/cute-baby-colors.jpg') no-repeat 50% 40%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
 }
 
@@ -82,7 +73,22 @@ body {
 
 .tagline {
   color: #f7f7f7;
-  font-size: 45px;
+  font-size: 46px;
+  -webkit-transition: .2s all ease-in;
+  transition: .2s all ease-in;
+}
+
+.button-out, .button-out:link, .button-out:visited, .button-out:active {
+  margin: 0 8px;
+  border: 1px solid #D62225;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+  color: #d62225;
+  font-size: 18px;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px #000000;
+  -webkit-transition: .2s all ease-in;
+  transition: .2s all ease-in;
 }
 
 /* main content */
@@ -122,6 +128,19 @@ article p {
   overflow: hidden;
 }
 
+img.lightbulb {
+  max-width: 280px;
+  min-width: 220px;
+  max-height: auto;
+  min-height: auto;
+}
+
+/* registration form */
+.form {
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+
 /* contact us */
 
 .contact {
@@ -145,19 +164,18 @@ form button {
   width: 80px;
 }
 
-button:hover {
+button:hover, .button-out:hover {
   background-color: #D62225;
   color: #ffffff;
   cursor: pointer;
+  text-decoration: none;
 }
 
 /* footer */
-footer {
-  background: -moz-linear-gradient(0deg, #FF2600 0%, #D42834 100%); /* ff3.6+ */
+footer { /* ff3.6+ */
   background: -webkit-gradient(linear, left top, right top, color-stop(0%, #FF2600), color-stop(100%, #D42834)); /* safari4+,chrome */
-  background: -webkit-linear-gradient(0deg, #FF2600 0%, #D42834 100%); /* safari5.1+,chrome10+ */
-  background: -o-linear-gradient(0deg, #FF2600 0%, #D42834 100%); /* opera 11.10+ */
-  background: -ms-linear-gradient(0deg, #FF2600 0%, #D42834 100%); /* ie10+ */
+  background: -webkit-linear-gradient(0deg, #FF2600 0%, #D42834 100%); /* safari5.1+,chrome10+ */ /* opera 11.10+ */ /* ie10+ */
+  background: -webkit-linear-gradient(left, #FF2600 0%, #D42834 100%);
   background: linear-gradient(90deg, #FF2600 0%, #D42834 100%); /* w3c */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF2600', endColorstr='#D42834',GradientType=1 ); /* ie6-9 */
 
@@ -207,6 +225,8 @@ footer a, .footer-icons a {
     bottom: 0;
     list-style: none;
     display: none;
+    -webkit-transition: .2s all ease-in;
+    transition: .2s all ease-in;
   }
   .menu-nav a {
     color: #d62225;
@@ -234,5 +254,15 @@ footer a, .footer-icons a {
   }
   .reach-us {
     margin-left: -25px;
+  }
+}
+
+@media (max-width: 519px) {
+  .tagline {
+    font-size: 30px;
+  }
+  .button-out, .button-out:link, .button-out:visited, .button-out:active {
+    font-size: 14px;
+    padding: 4px 8px;
   }
 }
