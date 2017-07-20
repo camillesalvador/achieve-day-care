@@ -73,4 +73,5 @@ $headers = 'From: '.$email_from."\r\n".
 <?php
 
 }
+echo "Thank You!";
 ?>
