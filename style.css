@@ -36,6 +36,10 @@ body {
   transition: .2s all ease-in;
 }
 
+.nav-icons a:hover {
+  text-decoration: none;
+}
+
 .menu-icon, .menu-nav {
   display: none;
 }
@@ -187,7 +191,9 @@ footer a, .footer-icons a {
   color: #ffffff;
 }
 
-.creator:hover {
+
+
+.creator:hover, .address a:hover{
   color: #ffffff;
   text-decoration: none;
   border-bottom: 1px solid #ffffff;
@@ -231,6 +237,9 @@ footer a, .footer-icons a {
   .menu-nav a {
     color: #d62225;
     font-size: 25px;
+  }
+  .menu-nav a:hover {
+    text-decoration: underline;
   }
   .menu-nav .nav-item {
     font-weight: 500;
